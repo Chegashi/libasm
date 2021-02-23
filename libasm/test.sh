@@ -1,3 +1,3 @@
-nasm -f macho64 hello.s -o hello.o
-gcc main.c hello.o 
+nasm -f macho64 ft_strcpy.s -o ft_strcpy.o 
+gcc main.c ft_strcpy.o 
 ./a.out
