@@ -58,17 +58,16 @@ int		main(void)
 	// STRCMP("", "toto")
 	// STRCMP("toto", "")
 	// STRCMP("toto", "totobar")
-	// printf("`%s`:`%s` = %d\n", "TOTO", NULL, ft_strcmp("TOTO", NULL));
-	// printf("`%s`:`%s` = %d\n", NULL, "TOTO", ft_strcmp(NULL, "TOTO"));
-	// printf("`%s`:`%s` = %d\n", NULL, NULL, ft_strcmp(NULL, NULL));
+	// printf("`%s`:`%s` = %d\n", "TOTO", NULL, strcmp("TOTO", NULL));
+	// printf("`%s`:`%s` = %d\n", NULL, "TOTO", strcmp(NULL, "TOTO"));
+	// printf("`%s`:`%s` = %d\n", NULL, NULL, strcmp(NULL, NULL));
 	// printf("-done\n");
 
-	printf("\n--strcpy\n");
-	printf("`%s` (`toto`)\n", ft_strcpy(buffer, "toto"));
-	printf("`%s` (empty)\n", ft_strcpy(buffer, ""));
-	printf("`%s` (`long message`)\n", ft_strcpy(buffer, "long message"));
-	printf("`%s` (NULL > not modified)\n", ft_strcpy(buffer, NULL));
-	printf("-done\n");
+	// printf("\n--strcpy\n");
+	// printf("`%s` (`toto`)\n", ft_strcpy(buffer, "toto"));
+	// printf("`%s` (empty)\n", ft_strcpy(buffer, ""));
+	// printf("`%s` (`long message`)\n", ft_strcpy(buffer, "long message"));
+	// printf("-done\n");
 
 	// printf("\n--write\n");
 	// WRITE("toto", 4L)
@@ -86,15 +85,15 @@ int		main(void)
 	// READ(buffer, 0)
 	// printf("-done\n");
 
-	// printf("\n--ft_strdup\n");
-	// tmp2 = ft_strdup("toto");
-	// DUP(tmp2)
-	// free(tmp2);
-	// DUP("totobar")
-	// DUP("long message")
-	// DUP("")
-	// DUP(NULL)
-	// printf("-done\n");
+	printf("\n--ft_strdup\n");
+	tmp2 = ft_strdup("toto");
+	DUP(tmp2)
+	free(tmp2);
+	DUP("totobar")
+	DUP("long message")
+	DUP("")
+	DUP(NULL)
+	printf("-done\n");
 
 	return (0);
 }

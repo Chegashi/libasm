@@ -7,11 +7,12 @@ _ft_strcpy:
 ft_strcpy :
     cmp  [rsi + rax] , byte 0 
     je return
-    mov [rdi + rax] , [rsi + rax]
+    mov bl ,  [rsi + rax]
+    mov [rdi + rax] ,  bl
     inc rax
     jmp ft_strcpy
 
 return :
-    mov [rdi + rax] , [rsi + rax]
+    mov [rdi + rax] , byte 0
     mov rax , rdi
     ret
