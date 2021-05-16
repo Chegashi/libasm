@@ -6,7 +6,7 @@
 #    By: mochegri <mochegri@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/24 17:43:57 by mochegri          #+#    #+#              #
-#    Updated: 2021/05/15 18:39:53 by mochegri         ###   ########.fr        #
+#    Updated: 2021/05/16 19:44:03 by mochegri         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,16 +22,16 @@ OBJS = $(SRCS:.s=.o)
 $(NAME) : $(OBJS)
 	ar rc $(NAME) $(OBJS)
 	ranlib $(NAME)
+	rm *.o
 
 all : $(NAME)
-
 
 clean :
 	rm -rf $(OBJS)
 
 fclean : clean
 	rm -rf $(NAME)
-	rm a.out
+	#rm a.out
 
 re : fclean all
 

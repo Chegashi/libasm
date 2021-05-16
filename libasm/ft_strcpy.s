@@ -5,7 +5,7 @@ _ft_strcpy:
     mov rax , 0
 
 ft_strcpy :
-    cmp  [rsi + rax] , byte 0 
+    cmp  [rsi + rax] , byte 0
     je return
     mov bl ,  [rsi + rax]
     mov [rdi + rax] ,  bl

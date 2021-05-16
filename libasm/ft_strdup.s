@@ -1,28 +1,25 @@
 global _ft_strdup
 extern _malloc
-; char	*ft_strdup(const char *src)
-; {
-; 	char	*p;
-; 	size_t	i;
-
-; 	i = 0;
-; 	p = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
-; 	if (p == 0)
-; 		return (0);
-; 	while (i < ft_strlen(src))
-; 	{
-; 		p[i] = src[i];
-; 		i++;
-; 	}
-; 	p[i] = '\0';
-; 	return (p);
-; }
+extern _ft_strlen
+extern _ft_strcpy
+extern ___error
 
 _ft_strdup:
     mov rax , 0
+    push rdi
+    call _ft_strlen
+    mov rdi, rax
+    call _malloc
+    cmp rax , 0
+    je ernno
+    mov rdi , rax
+    pop rsi
+    mov rax , 0
+    jmp _ft_strcpy
+    ret
 
-ft_strdup :
-    mov rax , rdi
-	call _ft_strlen
-	call ft_strcpy
+ernno:
+    call ___error
+    mov [rax] , byte 12
+    mov rax , 0
     ret
